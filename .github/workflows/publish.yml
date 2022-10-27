@@ -25,7 +25,7 @@ jobs:
         uses: home-assistant/actions/helpers/info@master
 
   publish:
-    name: Publish builder
+    name: Publish ha-builder
     needs: init
     runs-on: ubuntu-latest
     strategy:
@@ -53,7 +53,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish ${{ matrix.architecture }} builder
+      - name: Publish ${{ matrix.architecture }} ha-builder
         uses: ./
         with:
           args: |

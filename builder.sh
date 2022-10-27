@@ -941,8 +941,8 @@ fi
 mkdir -p /data
 
 # Setup docker env
-init_crosscompile
 start_docker
+init_crosscompile
 
 # Load external repository
 if [ -n "$GIT_REPOSITORY" ]; then
